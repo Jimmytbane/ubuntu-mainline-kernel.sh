@@ -21,7 +21,7 @@ sudo mv ubuntu-mainline-kernel.sh /usr/local/bin/
 If you want to automatically check for a new kernel version when you login:
 ```
 wget https://raw.githubusercontent.com/jimmytbane/ubuntu-mainline-kernel.sh/master/UbuntuMainlineKernel.desktop
-mv UbuntuMainlineKernel.desktop ~/.config/autostart/
+mv -f UbuntuMainlineKernel.desktop ~/.config/autostart/
 ```
 
 ## SecureBoot
