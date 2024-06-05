@@ -18,10 +18,10 @@ self_update_url="https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel
 quiet=0
 
 # If check_signature=0 then the signature of the CHECKSUMS file will not be checked
-check_signature=1
+check_signature=0
 
 # If check_checksum=0 then the checksums of the .deb files will not be checked
-check_checksum=0
+check_checksum=1
 
 # If doublecheckversion=1 then also check the version specific ppa page to make
 # sure the kernel build was successful
