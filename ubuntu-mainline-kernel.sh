@@ -3,9 +3,9 @@
 # shellcheck disable=SC1117
 
 # Ubuntu Kernel PPA info
-ppa_host="kernel.ubuntu.com"
+ppa_host="pgp.mit.edu"
 ppa_index="/~kernel-ppa/mainline/"
-ppa_key="17C622B0"
+ppa_key="60AA7B6F30434AE68E569963E50C6A0917C622B0"
 
 # Machine-Owner-Key for Secure Boot
 sign_kernel=0
@@ -73,7 +73,7 @@ use_rc=0
 # (internal) If assume_yes=1 assume yes on all prompts
 assume_yes=0
 
-# (internal) How many files we expect to retrieve from the ppa
+# (internal) How many files we expect to retrieve from the 
 # checksum, signature, header-all, header-arch, image(-unsigned), modules
 expected_files_count=6
 
@@ -966,7 +966,7 @@ EOF
             if ! gpg --list-keys ${ppa_key} >$debug_target 2>&1; then
                 logn "Importing kernel-ppa gpg key "
 
-                if gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv ${ppa_key} >$debug_target 2>&1; then
+                if gpg --keyserver hkp://pgp.mit.edu:80 --recv ${ppa_key} >$debug_target 2>&1; then
                     log "ok"
                 else
                     logn "failed"
