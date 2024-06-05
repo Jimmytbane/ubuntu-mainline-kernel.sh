@@ -3,7 +3,7 @@
 # shellcheck disable=SC1117
 
 # Ubuntu Kernel PPA info
-ppa_host="pgp.mit.edu"
+ppa_host="kernel.ubuntu.com"
 ppa_index="/~kernel-ppa/mainline/"
 ppa_key="60AA7B6F30434AE68E569963E50C6A0917C622B0"
 
