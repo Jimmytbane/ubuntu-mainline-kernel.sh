@@ -966,7 +966,7 @@ EOF
             if ! gpg --list-keys ${ppa_key} >$debug_target 2>&1; then
                 logn "Importing kernel-ppa gpg key "
 
-                if gpg --keyserver hkp://pgp.mit.edu:80 --recv ${ppa_key} >$debug_target 2>&1; then
+                if gpg --keyserver hkp://kernel.ubuntu.com:80 --recv ${ppa_key} >$debug_target 2>&1; then
                     log "ok"
                 else
                     logn "failed"
