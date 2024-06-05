@@ -21,7 +21,7 @@ quiet=0
 check_signature=0
 
 # If check_checksum=0 then the checksums of the .deb files will not be checked
-check_checksum=1
+check_checksum=0
 
 # If doublecheckversion=1 then also check the version specific ppa page to make
 # sure the kernel build was successful
