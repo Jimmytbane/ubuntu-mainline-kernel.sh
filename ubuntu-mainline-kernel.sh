@@ -5,7 +5,7 @@
 # Ubuntu Kernel PPA info
 ppa_host="kernel.ubuntu.com"
 ppa_index="/~kernel-ppa/mainline/"
-ppa_key="60AA7B6F30434AE68E569963E50C6A0917C622B0"
+ppa_key="17C622B0"
 
 # Machine-Owner-Key for Secure Boot
 sign_kernel=0
@@ -966,7 +966,7 @@ EOF
             if ! gpg --list-keys ${ppa_key} >$debug_target 2>&1; then
                 logn "Importing kernel-ppa gpg key "
 
-                if gpg --keyserver hkp://kernel.ubuntu.com:80 --recv ${ppa_key} >$debug_target 2>&1; then
+                if sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ${ppa_key} >$debug_target 2>&1; then
                     log "ok"
                 else
                     logn "failed"
