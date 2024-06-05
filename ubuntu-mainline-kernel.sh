@@ -18,7 +18,7 @@ self_update_url="https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel
 quiet=0
 
 # If check_signature=0 then the signature of the CHECKSUMS file will not be checked
-check_signature=1
+check_signature=0
 
 # If check_checksum=0 then the checksums of the .deb files will not be checked
 check_checksum=1
@@ -74,7 +74,7 @@ use_rc=0
 assume_yes=0
 
 # (internal) How many files we expect to retrieve from the 
-# checksum, signature, header-all, header-arch, image(-unsigned), modules
+# , signature, header-all, header-arch, image(-unsigned), modules
 expected_files_count=6
 
 # (internal) Which action/command the script should run
@@ -250,8 +250,8 @@ while (( "$#" )); do
         -ns|--no-signature)
             check_signature=0
             ;;
-        -nc|--no-checksum)
-            check_checksum=0
+        -nc|--no-)
+            check_=0
             ;;
         -d|--debug)
             debug_target="/dev/stderr"
@@ -578,8 +578,8 @@ Optional:
   -lpae, --lpae        Use the Large Physical Address Extension kernel, only for armhf
   --snapdragon         Use the Snapdragon kernel, only for arm64
   -do, --download-only Only download the deb files, do not install them
-  -ns, --no-signature  Do not check the gpg signature of the checksums file
-  -nc, --no-checksum   Do not check the sha checksums of the .deb files
+  -ns, --no-signature  Do not check the gpg signature of the s file
+  -nc, --no-   Do not check the sha s of the .deb files
   -d, --debug          Show debug information, all internal command's echo their output
   --rc                 Also include release candidates
   --yes                Assume yes on all questions (use with caution!)
